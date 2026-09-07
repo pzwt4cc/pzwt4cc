@@ -78,7 +78,7 @@
   </tr>
 </table>
 
-## 「 MU PERSONAL AI CODING BRO  - MAKSIK.AI - 」
+## 「 MY PERSONAL AI CODING BRO  - MAKSIK.AI - 」
 
 <a href="https://github.com/lostvalkrie" target="_blank">
   <img src="https://github.com/lostvalkrie.png?size=64" width="64" height="64" style="border-radius: 50%;" alt="lostvalkrie" />
