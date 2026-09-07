@@ -1,4 +1,4 @@
-<div align="center">
+<div>
 
 <h1>Hi there, I'm Victor</h1>
 
@@ -8,7 +8,7 @@
 
 <br>
 
-<h2>⚡ Tech & Tools</h2>
+<h2>Tech & Tools</h2>
 
 <p>
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML 5" />
@@ -57,29 +57,38 @@
 
 <h2>Currently building</h2>
 
-<p>
-  <img src="https://img.shields.io/badge/AeonShell-7AA2F7?style=for-the-badge&logo=linux&logoColor=white" />
-  <br>
-  <sub>My take on Hyprland — personal config & style. Shell ambitions</sub>
-</p>
-
-<p>
-  <img src="https://img.shields.io/badge/Citrus-E43716?style=for-the-badge&logo=rust&logoColor=white" />
-  <br>
-  <sub>Rust file manager — CRUD, multi-select, previews, mount detection</sub>
-</p>
-
-<p>
-  <img src="https://img.shields.io/badge/AniZip-7AA2F7?style=for-the-badge&logo=7zip&logoColor=white" />
-  <br>
-  <sub>Cross-platform archiver — simple interface, 7-Zip under the hood</sub>
-</p>
+<table width="100%">
+  <tr>
+    <td width="250">
+      <img src="https://img.shields.io/badge/AeonShell-7AA2F7?style=for-the-badge&logo=linux&logoColor=white" />
+    </td>
+    <td>
+      <b>My take on Hyprland — personal config & style. Shell ambitions</b>
+    </td>
+  </tr>
+  <tr>
+    <td width="250">
+      <img src="https://img.shields.io/badge/Citrus-E43716?style=for-the-badge&logo=rust&logoColor=white" />
+    </td>
+    <td>
+      <b>Rust file manager — CRUD, multi-select, previews, mount detection</b>
+    </td>
+  </tr>
+  <tr>
+    <td width="250">
+      <img src="https://img.shields.io/badge/AniZip-7AA2F7?style=for-the-badge&logo=7zip&logoColor=white" />
+    </td>
+    <td>
+      <b>Cross-platform archiver — simple interface, 7-Zip under the hood</b>
+    </td>
+  </tr>
+</table>
 
 <br>
 
 <h2>Connect with me</h2>
 
-<p>
+<div align="center">
   <a href="https://t.me/pzwt4cc">
     <img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram" />
   </a>
@@ -91,12 +100,14 @@
   <a href="https://www.pinterest.com/pzwt4cc">
     <img src="https://img.shields.io/badge/Pinterest-E60023?style=for-the-badge&logo=pinterest&logoColor=white" alt="Pinterest" />
   </a>
-</p>
+</div>
 
 <br>
 
 <div align="center">
   <img src="https://komarev.com/ghpvc/?username=pzwt4cc&color=7AA2F7&style=for-the-badge&label=Profile+Views" alt="Profile views" />
+  &nbsp;&nbsp;
+  <img src="https://img.shields.io/github/stars/pzwt4cc?color=7AA2F7&style=for-the-badge&label=Stars" alt="Stars" />
 </div>
 
 </div>
