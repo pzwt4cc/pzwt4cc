@@ -6,8 +6,6 @@
   <i>Tinkering with Linux, the web, and whatever catches my eye next.</i>
 </h3>
 
-<br>
-
 <h2>Tech & Tools</h2>
 
 <p>
@@ -21,8 +19,6 @@
   &nbsp;
   <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
 </p>
-
-<br>
 
 <h2>About me</h2>
 
@@ -53,8 +49,6 @@
   </p>
 </div>
 
-<br>
-
 <h2>Currently building</h2>
 
 <table width="100%">
@@ -83,8 +77,6 @@
     </td>
   </tr>
 </table>
-
-<br>
 
 <h2>Connect with me</h2>
 
