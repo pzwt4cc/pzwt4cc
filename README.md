@@ -81,7 +81,7 @@
 ## 「 MY PERSONAL AI CODING BRO  - MAKSIK.AI - 」
 
 <a href="https://github.com/lostvalkrie" target="_blank">
-  <img src="https://github.com/lostvalkrie.png?size=64" width="64" height="64" style="border-radius: 50%;" alt="lostvalkrie" />
+  <img src="https://images.weserv.nl/?url=github.com/lostvalkrie.png&w=64&h=64&mask=circle" alt="Maksik.AI" />
 </a>
 
 <h2>Connect with me</h2>
