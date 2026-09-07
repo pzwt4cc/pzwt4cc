@@ -89,7 +89,7 @@
     <img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" />
   </a>
   &nbsp;&nbsp;
-  <a href="https://www.pinterest.com/pzwt4cc">
+  <a href="https://www.pinterest.com/deidarochka2d/_pins/">
     <img src="https://img.shields.io/badge/Pinterest-E60023?style=for-the-badge&logo=pinterest&logoColor=white" alt="Pinterest" />
   </a>
 </div>
