@@ -57,19 +57,19 @@
 
 <h2>Currently building</h2>
 
-<p align="center">
+<p>
   <img src="https://img.shields.io/badge/AeonShell-7AA2F7?style=for-the-badge&logo=linux&logoColor=white" />
   <br>
   <sub>My take on Hyprland — personal config & style. Shell ambitions</sub>
 </p>
 
-<p align="center">
+<p>
   <img src="https://img.shields.io/badge/Citrus-E43716?style=for-the-badge&logo=rust&logoColor=white" />
   <br>
   <sub>Rust file manager — CRUD, multi-select, previews, mount detection</sub>
 </p>
 
-<p align="center">
+<p>
   <img src="https://img.shields.io/badge/AniZip-7AA2F7?style=for-the-badge&logo=7zip&logoColor=white" />
   <br>
   <sub>Cross-platform archiver — simple interface, 7-Zip under the hood</sub>
