@@ -6,6 +6,8 @@
   <i>Tinkering with Linux, the web, and whatever catches my eye next.</i>
 </h3>
 
+<hr style="border: 0; height: 1px; background: #30363d; margin: 30px 0;">
+
 <h2>Tech & Tools</h2>
 
 <p>
@@ -20,9 +22,9 @@
   <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js" />
   &nbsp;
   <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express" />
-  &nbsp;
-  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
 </p>
+
+<hr style="border: 0; height: 1px; background: #30363d; margin: 30px 0;">
 
 <h2>About me</h2>
 
@@ -53,6 +55,18 @@
   </p>
 </div>
 
+<hr style="border: 0; height: 1px; background: #30363d; margin: 30px 0;">
+
+<h3>Work setup</h3>
+
+<p>
+  <img src="https://img.shields.io/badge/Zed-2C2C2C?style=for-the-badge&logo=zed&logoColor=white" alt="Zed" />
+  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
+  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+</p>
+
+<hr style="border: 0; height: 1px; background: #30363d; margin: 30px 0;">
+
 <h2>Currently building</h2>
 
 <table width="100%">
@@ -82,11 +96,15 @@
   </tr>
 </table>
 
-## 「 MY PERSONAL AI CODING BRO  - MAKSIK.AI - 」
+<hr style="border: 0; height: 1px; background: #30363d; margin: 30px 0;">
+
+## 「 MY PERSONAL AI CODING BRO  - MAKSIK.AI 」
 
 <a href="https://github.com/lostvalkrie" target="_blank">
   <img src="https://images.weserv.nl/?url=github.com/lostvalkrie.png&w=64&h=64&mask=circle" alt="Maksik.AI" />
 </a>
+
+<hr style="border: 0; height: 1px; background: #30363d; margin: 30px 0;">
 
 <h2>Connect with me</h2>
 
