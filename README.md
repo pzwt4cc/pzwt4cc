@@ -72,26 +72,10 @@
 <table width="100%">
   <tr>
     <td width="250">
-      <img src="https://img.shields.io/badge/AeonShell-7AA2F7?style=for-the-badge&logo=linux&logoColor=white" />
+      <img src="https://img.shields.io/badge/mithril-viewer-E43716?style=for-the-badge&logo=rust&logoColor=white" />
     </td>
     <td>
-      <b>My take on Hyprland — personal config & style. Shell ambitions</b>
-    </td>
-  </tr>
-  <tr>
-    <td width="250">
-      <img src="https://img.shields.io/badge/Citrus-E43716?style=for-the-badge&logo=rust&logoColor=white" />
-    </td>
-    <td>
-      <b>Rust file manager — CRUD, multi-select, previews, mount detection</b>
-    </td>
-  </tr>
-  <tr>
-    <td width="250">
-      <img src="https://img.shields.io/badge/AniZip-7AA2F7?style=for-the-badge&logo=7zip&logoColor=white" />
-    </td>
-    <td>
-      <b>Cross-platform archiver — simple interface, 7-Zip under the hood</b>
+      <b>A fast, minimal, GPU-accelerated image viewer for Linux</b>
     </td>
   </tr>
 </table>
