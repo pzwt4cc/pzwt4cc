@@ -1,0 +1,656 @@
+{
+ "key": "da0b4134",
+ "stars": 3,
+ "contributions": 647,
+ "repos": 54,
+ "followers": 2,
+ "languages": [
+  [
+   "Rust",
+   772445
+  ],
+  [
+   "QML",
+   638348
+  ],
+  [
+   "JavaScript",
+   580210
+  ],
+  [
+   "Assembly",
+   240009
+  ],
+  [
+   "HTML",
+   180237
+  ],
+  [
+   "CSS",
+   164835
+  ],
+  [
+   "C++",
+   116857
+  ]
+ ],
+ "days": [
+  [
+   {
+    "c": 26,
+    "day": 8,
+    "today": false
+   },
+   {
+    "c": 50,
+    "day": 9,
+    "today": false
+   },
+   {
+    "c": 0,
+    "day": 10,
+    "today": false
+   },
+   {
+    "c": 0,
+    "day": 11,
+    "today": false
+   },
+   {
+    "c": 0,
+    "day": 12,
+    "today": false
+   },
+   {
+    "c": 18,
+    "day": 13,
+    "today": false
+   },
+   {
+    "c": 12,
+    "day": 14,
+    "today": false
+   }
+  ],
+  [
+   {
+    "c": 0,
+    "day": 15,
+    "today": false
+   },
+   {
+    "c": 0,
+    "day": 16,
+    "today": false
+   },
+   {
+    "c": 0,
+    "day": 17,
+    "today": false
+   },
+   {
+    "c": 0,
+    "day": 18,
+    "today": false
+   },
+   {
+    "c": 0,
+    "day": 19,
+    "today": false
+   },
+   {
+    "c": 0,
+    "day": 20,
+    "today": false
+   },
+   {
+    "c": 5,
+    "day": 21,
+    "today": false
+   }
+  ],
+  [
+   {
+    "c": 2,
+    "day": 22,
+    "today": false
+   },
+   {
+    "c": 4,
+    "day": 23,
+    "today": false
+   },
+   {
+    "c": 0,
+    "day": 24,
+    "today": false
+   },
+   {
+    "c": 0,
+    "day": 25,
+    "today": false
+   },
+   {
+    "c": 54,
+    "day": 26,
+    "today": true
+   },
+   {
+    "c": 11,
+    "day": 27,
+    "today": false
+   },
+   null
+  ]
+ ],
+ "streak": {
+  "current": 1,
+  "longest": 14
+ },
+ "pins": [
+  {
+   "name": "mithril-viewer",
+   "url": "https://github.com/pzwt4cc/mithril-viewer",
+   "text": "",
+   "fork": false,
+   "stars": 0,
+   "language": "Rust",
+   "topics": []
+  }
+ ],
+ "all": [
+  {
+   "name": "dotfiles",
+   "url": "https://github.com/pzwt4cc/dotfiles",
+   "text": "Hyprland dotfiles",
+   "fork": false,
+   "stars": 2,
+   "language": "Shell",
+   "topics": []
+  },
+  {
+   "name": "nulla",
+   "url": "https://github.com/pzwt4cc/nulla",
+   "text": "",
+   "fork": false,
+   "stars": 1,
+   "language": "QML",
+   "topics": []
+  },
+  {
+   "name": "college-webdev-p5",
+   "url": "https://github.com/pzwt4cc/college-webdev-p5",
+   "text": "",
+   "fork": false,
+   "stars": 0,
+   "language": "HTML",
+   "topics": []
+  },
+  {
+   "name": "PetProjectJS",
+   "url": "https://github.com/pzwt4cc/PetProjectJS",
+   "text": "",
+   "fork": false,
+   "stars": 0,
+   "language": "JavaScript",
+   "topics": []
+  },
+  {
+   "name": "edu-m5-task4-Frontend",
+   "url": "https://github.com/pzwt4cc/edu-m5-task4-Frontend",
+   "text": "",
+   "fork": false,
+   "stars": 0,
+   "language": "JavaScript",
+   "topics": []
+  },
+  {
+   "name": "flathub",
+   "url": "https://github.com/pzwt4cc/flathub",
+   "text": "Issue tracker and new submissions",
+   "fork": true,
+   "stars": 0,
+   "language": null,
+   "topics": []
+  },
+  {
+   "name": "college-webdev-p4",
+   "url": "https://github.com/pzwt4cc/college-webdev-p4",
+   "text": "",
+   "fork": false,
+   "stars": 0,
+   "language": "JavaScript",
+   "topics": []
+  },
+  {
+   "name": "wengine-dl",
+   "url": "https://github.com/pzwt4cc/wengine-dl",
+   "text": "",
+   "fork": false,
+   "stars": 0,
+   "language": "Rust",
+   "topics": []
+  },
+  {
+   "name": "arabellity",
+   "url": "https://github.com/pzwt4cc/arabellity",
+   "text": "",
+   "fork": false,
+   "stars": 0,
+   "language": "Assembly",
+   "topics": []
+  },
+  {
+   "name": "mithril-viewer",
+   "url": "https://github.com/pzwt4cc/mithril-viewer",
+   "text": "",
+   "fork": false,
+   "stars": 0,
+   "language": "Rust",
+   "topics": []
+  },
+  {
+   "name": "edu-m5-task3",
+   "url": "https://github.com/pzwt4cc/edu-m5-task3",
+   "text": "",
+   "fork": false,
+   "stars": 0,
+   "language": "JavaScript",
+   "topics": []
+  },
+  {
+   "name": "Lirel",
+   "url": "https://github.com/pzwt4cc/Lirel",
+   "text": "",
+   "fork": false,
+   "stars": 0,
+   "language": "Rust",
+   "topics": []
+  },
+  {
+   "name": "edu-m5-task2",
+   "url": "https://github.com/pzwt4cc/edu-m5-task2",
+   "text": "",
+   "fork": false,
+   "stars": 0,
+   "language": "JavaScript",
+   "topics": []
+  },
+  {
+   "name": "edu-m5-task1",
+   "url": "https://github.com/pzwt4cc/edu-m5-task1",
+   "text": "",
+   "fork": false,
+   "stars": 0,
+   "language": "JavaScript",
+   "topics": []
+  },
+  {
+   "name": "edu-m4-task5",
+   "url": "https://github.com/pzwt4cc/edu-m4-task5",
+   "text": "",
+   "fork": false,
+   "stars": 0,
+   "language": "JavaScript",
+   "topics": []
+  },
+  {
+   "name": "edu-m4-task4",
+   "url": "https://github.com/pzwt4cc/edu-m4-task4",
+   "text": "",
+   "fork": false,
+   "stars": 0,
+   "language": "JavaScript",
+   "topics": []
+  },
+  {
+   "name": "edu-m4-task3",
+   "url": "https://github.com/pzwt4cc/edu-m4-task3",
+   "text": "",
+   "fork": false,
+   "stars": 0,
+   "language": "JavaScript",
+   "topics": []
+  },
+  {
+   "name": "edu-m4-task2",
+   "url": "https://github.com/pzwt4cc/edu-m4-task2",
+   "text": "",
+   "fork": false,
+   "stars": 0,
+   "language": "JavaScript",
+   "topics": []
+  },
+  {
+   "name": "college-webdev-p3",
+   "url": "https://github.com/pzwt4cc/college-webdev-p3",
+   "text": "",
+   "fork": false,
+   "stars": 0,
+   "language": "JavaScript",
+   "topics": []
+  },
+  {
+   "name": "edu-m4-task1",
+   "url": "https://github.com/pzwt4cc/edu-m4-task1",
+   "text": "",
+   "fork": false,
+   "stars": 0,
+   "language": "CSS",
+   "topics": []
+  },
+  {
+   "name": "college-webdev-p2-task2",
+   "url": "https://github.com/pzwt4cc/college-webdev-p2-task2",
+   "text": "",
+   "fork": false,
+   "stars": 0,
+   "language": "CSS",
+   "topics": []
+  },
+  {
+   "name": "college-webdev-p2-task1",
+   "url": "https://github.com/pzwt4cc/college-webdev-p2-task1",
+   "text": "",
+   "fork": false,
+   "stars": 0,
+   "language": "CSS",
+   "topics": []
+  },
+  {
+   "name": "edu-m3-task9",
+   "url": "https://github.com/pzwt4cc/edu-m3-task9",
+   "text": "",
+   "fork": false,
+   "stars": 0,
+   "language": "CSS",
+   "topics": []
+  },
+  {
+   "name": "edu-m3-task8",
+   "url": "https://github.com/pzwt4cc/edu-m3-task8",
+   "text": "",
+   "fork": false,
+   "stars": 0,
+   "language": "CSS",
+   "topics": []
+  },
+  {
+   "name": "edu-m3-task7",
+   "url": "https://github.com/pzwt4cc/edu-m3-task7",
+   "text": "",
+   "fork": false,
+   "stars": 0,
+   "language": "CSS",
+   "topics": []
+  },
+  {
+   "name": "pzwt4cc",
+   "url": "https://github.com/pzwt4cc/pzwt4cc",
+   "text": "",
+   "fork": false,
+   "stars": 0,
+   "language": null,
+   "topics": []
+  },
+  {
+   "name": "college-webdev-p1",
+   "url": "https://github.com/pzwt4cc/college-webdev-p1",
+   "text": "",
+   "fork": false,
+   "stars": 0,
+   "language": "HTML",
+   "topics": []
+  },
+  {
+   "name": "edu-m3-task6",
+   "url": "https://github.com/pzwt4cc/edu-m3-task6",
+   "text": "",
+   "fork": false,
+   "stars": 0,
+   "language": "CSS",
+   "topics": []
+  },
+  {
+   "name": "AniZip",
+   "url": "https://github.com/pzwt4cc/AniZip",
+   "text": "",
+   "fork": false,
+   "stars": 0,
+   "language": "Rust",
+   "topics": []
+  },
+  {
+   "name": "edu-m3-task5",
+   "url": "https://github.com/pzwt4cc/edu-m3-task5",
+   "text": "",
+   "fork": false,
+   "stars": 0,
+   "language": "JavaScript",
+   "topics": []
+  },
+  {
+   "name": "edu-m3-task4",
+   "url": "https://github.com/pzwt4cc/edu-m3-task4",
+   "text": "",
+   "fork": false,
+   "stars": 0,
+   "language": "JavaScript",
+   "topics": []
+  },
+  {
+   "name": "LEOBOG-GUI-HI75C",
+   "url": "https://github.com/pzwt4cc/LEOBOG-GUI-HI75C",
+   "text": "LEOBOG HI75C LINUX RGB SOFT",
+   "fork": false,
+   "stars": 0,
+   "language": "Python",
+   "topics": []
+  },
+  {
+   "name": "edu-m3-task3",
+   "url": "https://github.com/pzwt4cc/edu-m3-task3",
+   "text": "",
+   "fork": false,
+   "stars": 0,
+   "language": "JavaScript",
+   "topics": []
+  },
+  {
+   "name": "edu-m3-task2",
+   "url": "https://github.com/pzwt4cc/edu-m3-task2",
+   "text": "",
+   "fork": false,
+   "stars": 0,
+   "language": "CSS",
+   "topics": []
+  },
+  {
+   "name": "edu-m3-task1",
+   "url": "https://github.com/pzwt4cc/edu-m3-task1",
+   "text": "",
+   "fork": false,
+   "stars": 0,
+   "language": "CSS",
+   "topics": []
+  },
+  {
+   "name": "edu-m2-task8",
+   "url": "https://github.com/pzwt4cc/edu-m2-task8",
+   "text": "",
+   "fork": false,
+   "stars": 0,
+   "language": "CSS",
+   "topics": []
+  },
+  {
+   "name": "edu-m2-task7",
+   "url": "https://github.com/pzwt4cc/edu-m2-task7",
+   "text": "",
+   "fork": false,
+   "stars": 0,
+   "language": "JavaScript",
+   "topics": []
+  },
+  {
+   "name": "edu-m2-task6",
+   "url": "https://github.com/pzwt4cc/edu-m2-task6",
+   "text": "",
+   "fork": false,
+   "stars": 0,
+   "language": "JavaScript",
+   "topics": []
+  },
+  {
+   "name": "edu-m2-task5",
+   "url": "https://github.com/pzwt4cc/edu-m2-task5",
+   "text": "",
+   "fork": false,
+   "stars": 0,
+   "language": "JavaScript",
+   "topics": []
+  },
+  {
+   "name": "edu-m2-task4",
+   "url": "https://github.com/pzwt4cc/edu-m2-task4",
+   "text": "",
+   "fork": false,
+   "stars": 0,
+   "language": "JavaScript",
+   "topics": []
+  },
+  {
+   "name": "edu-m2-task3",
+   "url": "https://github.com/pzwt4cc/edu-m2-task3",
+   "text": "",
+   "fork": false,
+   "stars": 0,
+   "language": "JavaScript",
+   "topics": []
+  },
+  {
+   "name": "Citrus",
+   "url": "https://github.com/pzwt4cc/Citrus",
+   "text": "",
+   "fork": false,
+   "stars": 0,
+   "language": "Rust",
+   "topics": []
+  },
+  {
+   "name": "aeonshell",
+   "url": "https://github.com/pzwt4cc/aeonshell",
+   "text": "",
+   "fork": false,
+   "stars": 0,
+   "language": "QML",
+   "topics": []
+  },
+  {
+   "name": "edu-m2-task2",
+   "url": "https://github.com/pzwt4cc/edu-m2-task2",
+   "text": "",
+   "fork": false,
+   "stars": 0,
+   "language": "HTML",
+   "topics": []
+  },
+  {
+   "name": "edu-m2-task1",
+   "url": "https://github.com/pzwt4cc/edu-m2-task1",
+   "text": "",
+   "fork": false,
+   "stars": 0,
+   "language": "CSS",
+   "topics": []
+  },
+  {
+   "name": "edu-m1-task5",
+   "url": "https://github.com/pzwt4cc/edu-m1-task5",
+   "text": "",
+   "fork": false,
+   "stars": 0,
+   "language": "HTML",
+   "topics": []
+  },
+  {
+   "name": "edu-m1-task4",
+   "url": "https://github.com/pzwt4cc/edu-m1-task4",
+   "text": "",
+   "fork": false,
+   "stars": 0,
+   "language": "CSS",
+   "topics": []
+  },
+  {
+   "name": "edu-m1-task3",
+   "url": "https://github.com/pzwt4cc/edu-m1-task3",
+   "text": "",
+   "fork": false,
+   "stars": 0,
+   "language": "HTML",
+   "topics": []
+  },
+  {
+   "name": "edu-m1-task2",
+   "url": "https://github.com/pzwt4cc/edu-m1-task2",
+   "text": "",
+   "fork": false,
+   "stars": 0,
+   "language": "HTML",
+   "topics": []
+  },
+  {
+   "name": "branch-test",
+   "url": "https://github.com/pzwt4cc/branch-test",
+   "text": "",
+   "fork": false,
+   "stars": 0,
+   "language": "HTML",
+   "topics": []
+  },
+  {
+   "name": "edu-m1-task1",
+   "url": "https://github.com/pzwt4cc/edu-m1-task1",
+   "text": "",
+   "fork": false,
+   "stars": 0,
+   "language": "HTML",
+   "topics": []
+  },
+  {
+   "name": "steins-gate-info",
+   "url": "https://github.com/pzwt4cc/steins-gate-info",
+   "text": "",
+   "fork": false,
+   "stars": 0,
+   "language": "HTML",
+   "topics": []
+  },
+  {
+   "name": "Praktika_3k",
+   "url": "https://github.com/pzwt4cc/Praktika_3k",
+   "text": "",
+   "fork": false,
+   "stars": 0,
+   "language": "HTML",
+   "topics": []
+  },
+  {
+   "name": "Love-Yuri-Rusificator",
+   "url": "https://github.com/pzwt4cc/Love-Yuri-Rusificator",
+   "text": "Русификатор для 要来点百合吗 Love Yuri",
+   "fork": false,
+   "stars": 0,
+   "language": null,
+   "topics": [
+    "renpy",
+    "russian",
+    "translation",
+    "visual-novel",
+    "love-yuri",
+    "rusificator"
+   ]
+  }
+ ]
+}

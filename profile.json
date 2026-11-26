@@ -1,0 +1,254 @@
+{
+  "version": 1,
+  "login": "pzwt4cc",
+  "seed": "#2E86AB",
+  "seedFromAvatar": true,
+  "scheme": "vibrant",
+  "motion": true,
+  "iconFill": true,
+  "order": [
+    "hero",
+    "socials",
+    "wave",
+    "about",
+    "stack",
+    "projects",
+    "stats",
+    "streak",
+    "buttons"
+  ],
+  "hidden": [],
+  "hero": {
+    "greeting": "Hi there, I'm",
+    "name": "pzwt4cc",
+    "subtitle": "Tinkering with Linux, the web, and whatever comes next.",
+    "typing": true,
+    "avatarShape": "soft",
+    "chips": [
+      {
+        "icon": "brand:archlinux",
+        "label": "Arch Linux"
+      },
+      {
+        "icon": "brand:hyprland",
+        "label": "Hyprland"
+      },
+      {
+        "icon": "bolt",
+        "label": "Fight the power"
+      }
+    ]
+  },
+  "about": {
+    "title": "About me",
+    "items": [
+      {
+        "icon": "brand:archlinux",
+        "label": "Arch Linux (btw) is home base — running my own Hyprland setup"
+      },
+      {
+        "icon": "brand:rust",
+        "label": "Building fast Linux tools in Rust, QML & x86-64 Assembly"
+      },
+      {
+        "icon": "brand:react",
+        "label": "Into web stuff — HTML, CSS, JS, React, Node.js & Express"
+      },
+      {
+        "icon": "brand:anthropic",
+        "label": "Poking at interesting new tech with AI just to get the idea"
+      },
+      {
+        "icon": "brand:protonmail",
+        "label": "Care about privacy in the tools I use"
+      },
+      {
+        "icon": "favorite",
+        "label": "A bit of an anime fan too — always down to chat"
+      }
+    ]
+  },
+  "stack": {
+    "title": "Tech & Tools",
+    "groups": [
+      {
+        "title": "Systems & Native",
+        "items": [
+          {
+            "icon": "brand:rust",
+            "label": "Rust"
+          },
+          {
+            "icon": "brand:qt",
+            "label": "Qt / QML"
+          },
+          {
+            "icon": "brand:python",
+            "label": "Python"
+          },
+          {
+            "icon": "brand:wayland",
+            "label": "Wayland"
+          },
+          {
+            "icon": "terminal",
+            "label": "x86-64 NASM"
+          }
+        ]
+      },
+      {
+        "title": "Web Stack",
+        "items": [
+          {
+            "icon": "brand:html5",
+            "label": "HTML5"
+          },
+          {
+            "icon": "brand:css",
+            "label": "CSS3"
+          },
+          {
+            "icon": "brand:javascript",
+            "label": "JavaScript"
+          },
+          {
+            "icon": "brand:react",
+            "label": "React"
+          },
+          {
+            "icon": "brand:nodedotjs",
+            "label": "Node.js"
+          },
+          {
+            "icon": "brand:express",
+            "label": "Express.js"
+          }
+        ]
+      },
+      {
+        "title": "Environment & Workflow",
+        "items": [
+          {
+            "icon": "brand:archlinux",
+            "label": "Arch Linux"
+          },
+          {
+            "icon": "brand:hyprland",
+            "label": "Hyprland"
+          },
+          {
+            "icon": "brand:zedindustries",
+            "label": "Zed"
+          },
+          {
+            "icon": "brand:git",
+            "label": "Git"
+          },
+          {
+            "icon": "brand:github",
+            "label": "GitHub"
+          }
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "source": "manual",
+    "repos": [
+      "mithril-viewer",
+      "nulla",
+      "arabellity",
+      "aeonshell",
+      "wengine-dl",
+      "Lirel"
+    ],
+    "overrides": {
+      "mithril-viewer": {
+        "text": "Fast, minimal GPU-accelerated image viewer for Linux",
+        "icon": "image",
+        "shape": "cookie"
+      },
+      "nulla": {
+        "text": "Minimalist text & code editor with a Material 3 QML interface",
+        "icon": "edit_square",
+        "shape": "clover"
+      },
+      "arabellity": {
+        "text": "Standalone Wayland terminal emulator in x86-64 NASM assembly",
+        "icon": "terminal",
+        "shape": "sunny"
+      },
+      "aeonshell": {
+        "text": "Wayland desktop shell for Hyprland with Quickshell & pywal",
+        "icon": "wallpaper",
+        "shape": "flower"
+      },
+      "wengine-dl": {
+        "text": "GUI & CLI tool for Wallpaper Engine Steam Workshop videos",
+        "icon": "download",
+        "shape": "cookie"
+      },
+      "Lirel": {
+        "text": "Free local photo & video converter in Rust with Slint GUI",
+        "icon": "photo_camera",
+        "shape": "clover"
+      }
+    },
+    "empty": "No description yet.",
+    "fork": "Fork"
+  },
+  "stats": {
+    "title": "GitHub activity",
+    "stars": "Stars earned",
+    "contributions": "Contributions this year",
+    "repos": "Public repos",
+    "followers": "Followers",
+    "calendar": "Last 21 days",
+    "weekdays": "SMTWTFS",
+    "languages": "Languages across repositories",
+    "showLanguages": true
+  },
+  "streak": {
+    "title": "Streak",
+    "current": "Current streak",
+    "longest": "Longest this year",
+    "days": "days"
+  },
+  "socials": {
+    "items": [
+      {
+        "icon": "brand:telegram",
+        "url": "https://t.me/pzwt4cc"
+      },
+      {
+        "icon": "brand:discord",
+        "url": "https://discordapp.com/users/810041311062654987"
+      },
+      {
+        "icon": "brand:pinterest",
+        "url": "https://www.pinterest.com/deidarochka2d/_pins/"
+      }
+    ],
+    "variant": "chip",
+    "fill": "tonal",
+    "shape": "soft",
+    "card": true
+  },
+  "buttons": {
+    "card": true,
+    "items": [
+      {
+        "icon": "book_2",
+        "label": "All repositories",
+        "url": "",
+        "style": "filled"
+      },
+      {
+        "icon": "psychology",
+        "label": "Maksik.AI · Coding Bro",
+        "url": "https://github.com/lostvalkrie",
+        "style": "tonal"
+      }
+    ]
+  }
+}

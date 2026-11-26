@@ -1,117 +1,27 @@
-<div>
-
-<h1>Hi there, I'm pzwt4cc</h1>
-
-<h3>
-  <i>Tinkering with Linux, the web, and whatever catches my eye next.</i>
-</h3>
-
-<hr style="border: 0; height: 1px; background: #30363d; margin: 30px 0;">
-
-<h2>Tech & Tools</h2>
-
-<p>
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML 5" />
-  &nbsp;
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS 3" />
-  &nbsp;
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
-  &nbsp;
-  <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React" />
-  &nbsp;
-  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js" />
-  &nbsp;
-  <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express" />
-</p>
-
-<hr style="border: 0; height: 1px; background: #30363d; margin: 30px 0;">
-
-<h2>About me</h2>
-
-<div align="left" style="display: inline-block; text-align: left;">
-  <p>
-    <img src="https://img.shields.io/badge/-000000?style=flat-square&logo=archlinux&logoColor=white" width="30" height="20" />
-    <b>Arch Linux (btw)</b> is home base — running my own Hyprland setup
-  </p>
-  <p>
-    <img src="https://img.shields.io/badge/-000000?style=flat-square&logo=html5&logoColor=white" width="30" height="20" />
-    <b>Into web stuff</b> — HTML, CSS, JS, React — always down to try something new
-  </p>
-  <p>
-    <img src="https://img.shields.io/badge/-000000?style=flat-square&logo=anthropic&logoColor=white" width="30" height="20" />
-    Poking at interesting new tech with AI just to get the idea
-  </p>
-  <p>
-    <img src="https://img.shields.io/badge/-000000?style=flat-square&logo=protonmail&logoColor=white" width="30" height="20" />
-    Care about <b>privacy</b> in the tools I use
-  </p>
-  <p>
-    <img src="https://img.shields.io/badge/-000000?style=flat-square&logo=crunchyroll&logoColor=white" width="30" height="20" />
-    A bit of an <b>anime</b> fan too
-  </p>
-  <p>
-    <img src="https://img.shields.io/badge/-000000?style=flat-square&logo=discord&logoColor=white" width="30" height="20" />
-    Just like to talk
-  </p>
-</div>
-
-<hr style="border: 0; height: 1px; background: #30363d; margin: 30px 0;">
-
-<h3>Work setup</h3>
-
-<p>
-  <img src="https://img.shields.io/badge/Zed-2C2C2C?style=for-the-badge&logo=zed&logoColor=white" alt="Zed" />
-  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
-  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
-</p>
-
-<hr style="border: 0; height: 1px; background: #30363d; margin: 30px 0;">
-
-<h2>Currently building</h2>
-
-<table width="100%">
-  <tr>
-    <td width="250">
-      <img src="https://img.shields.io/badge/mithril-viewer-E43716?style=for-the-badge&logo=rust&logoColor=white" />
-    </td>
-    <td>
-      <b>A fast, minimal, GPU-accelerated image viewer for Linux</b>
-    </td>
-  </tr>
-</table>
-
-<hr style="border: 0; height: 1px; background: #30363d; margin: 30px 0;">
-
-## 「 MY PERSONAL AI CODING BRO  - MAKSIK.AI 」
-
-<a href="https://github.com/lostvalkrie" target="_blank">
-  <img src="https://images.weserv.nl/?url=github.com/lostvalkrie.png&w=64&h=64&mask=circle" alt="Maksik.AI" />
-</a>
-
-<hr style="border: 0; height: 1px; background: #30363d; margin: 30px 0;">
-
-<h2>Connect with me</h2>
-
 <div align="center">
-  <a href="https://t.me/pzwt4cc">
-    <img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram" />
-  </a>
-  &nbsp;&nbsp;
-  <a href="https://discordapp.com/users/810041311062654987">
-    <img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" />
-  </a>
-  &nbsp;&nbsp;
-  <a href="https://www.pinterest.com/deidarochka2d/_pins/">
-    <img src="https://img.shields.io/badge/Pinterest-E60023?style=for-the-badge&logo=pinterest&logoColor=white" alt="Pinterest" />
-  </a>
-</div>
 
-<br>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg"><img src="assets/hero-light.svg" width="100%" alt="Hi there, I&#x27;m pzwt4cc"></picture>
 
-<div align="center">
-  <img src="https://komarev.com/ghpvc/?username=pzwt4cc&color=7AA2F7&style=for-the-badge&label=Profile+Views" alt="Profile views" />
-  &nbsp;&nbsp;
-  <img src="https://img.shields.io/github/stars/pzwt4cc?color=7AA2F7&style=for-the-badge&label=Stars" alt="Stars" />
-</div>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/social-l-dark.svg"><img src="assets/social-l-light.svg" width="23.773%" alt=""></picture><a href="https://t.me/pzwt4cc"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/social-1-dark.svg"><img src="assets/social-1-light.svg" width="18.122%" alt="telegram"></picture></a><a href="https://discordapp.com/users/810041311062654987"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/social-2-dark.svg"><img src="assets/social-2-light.svg" width="16.552%" alt="discord"></picture></a><a href="https://www.pinterest.com/deidarochka2d/_pins/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/social-3-dark.svg"><img src="assets/social-3-light.svg" width="17.778%" alt="pinterest"></picture></a><picture><source media="(prefers-color-scheme: dark)" srcset="assets/social-r-dark.svg"><img src="assets/social-r-light.svg" width="23.773%" alt=""></picture>
+
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/wave-dark.svg"><img src="assets/wave-light.svg" width="100%" alt=""></picture>
+
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/about-dark.svg"><img src="assets/about-light.svg" width="100%" alt="About me"></picture>
+
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack-dark.svg"><img src="assets/stack-light.svg" width="100%" alt="Tech &amp; Tools"></picture>
+
+<a href="https://github.com/pzwt4cc/mithril-viewer"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/project-mithril-viewer-dark.svg"><img src="assets/project-mithril-viewer-light.svg" width="49%" alt="mithril-viewer"></picture></a>&nbsp;<a href="https://github.com/pzwt4cc/nulla"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/project-nulla-dark.svg"><img src="assets/project-nulla-light.svg" width="49%" alt="nulla"></picture></a>
+
+<a href="https://github.com/pzwt4cc/arabellity"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/project-arabellity-dark.svg"><img src="assets/project-arabellity-light.svg" width="49%" alt="arabellity"></picture></a>&nbsp;<a href="https://github.com/pzwt4cc/aeonshell"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/project-aeonshell-dark.svg"><img src="assets/project-aeonshell-light.svg" width="49%" alt="aeonshell"></picture></a>
+
+<a href="https://github.com/pzwt4cc/wengine-dl"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/project-wengine-dl-dark.svg"><img src="assets/project-wengine-dl-light.svg" width="49%" alt="wengine-dl"></picture></a>&nbsp;<a href="https://github.com/pzwt4cc/Lirel"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/project-lirel-dark.svg"><img src="assets/project-lirel-light.svg" width="49%" alt="Lirel"></picture></a>
+
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stats-dark.svg"><img src="assets/stats-light.svg" width="100%" alt="GitHub activity"></picture>
+
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/streak-dark.svg"><img src="assets/streak-light.svg" width="100%" alt="Streak"></picture>
+
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/button-l-dark.svg"><img src="assets/button-l-light.svg" width="20.540%" alt=""></picture><a href="https://github.com/pzwt4cc?tab=repositories"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/button-1-dark.svg"><img src="assets/button-1-light.svg" width="25.939%" alt="All repositories"></picture></a><a href="https://github.com/lostvalkrie"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/button-2-dark.svg"><img src="assets/button-2-light.svg" width="32.979%" alt="Maksik.AI · Coding Bro"></picture></a><picture><source media="(prefers-color-scheme: dark)" srcset="assets/button-r-dark.svg"><img src="assets/button-r-light.svg" width="20.540%" alt=""></picture>
+
+<a href="https://metawka.github.io/expressive-profile/?from=pzwt4cc"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/credit-dark.svg"><img src="assets/credit-light.svg" width="auto" alt="Made with Expressive Profile"></picture></a>
 
 </div>
