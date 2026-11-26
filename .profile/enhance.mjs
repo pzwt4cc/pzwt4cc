@@ -1,7 +1,7 @@
 import { setDefaultResultOrder } from "node:dns";
 setDefaultResultOrder("ipv4first");
 import { createHash } from "node:crypto";
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readdirSync, readFileSync, unlinkSync, writeFileSync } from "node:fs";
 import { PNG } from "pngjs";
 import jpeg from "jpeg-js";
 import {
@@ -109,8 +109,8 @@ async function fetchImage(url) {
   try {
     const res = await fetch(url, { signal: AbortSignal.timeout(15000) });
     if (!res.ok) return null;
-  const type = res.headers.get("content-type") || "image/png";
-  const buf = Buffer.from(await res.arrayBuffer());
+    const type = res.headers.get("content-type") || "image/png";
+    const buf = Buffer.from(await res.arrayBuffer());
     return { buf, dataUri: `data:${type};base64,${buf.toString("base64")}` };
   } catch {
     return null;
@@ -142,9 +142,102 @@ async function runPre() {
 }
 
 function extractStyle() {
-  const ref = readFileSync("assets/about-dark.svg", "utf8");
+  const ref = readFileSync("assets/hero-dark.svg", "utf8");
   const match = ref.match(/<style>([\s\S]*?)<\/style>/);
   return match ? match[1] : "";
+}
+
+function shiftTranslateY(svg, fromY, toY) {
+  return svg.replace(
+    new RegExp(`translate\\(([0-9.]+) ${fromY}\\)`, "g"),
+    (_, x) => `translate(${x} ${toY})`,
+  );
+}
+
+function shiftPathY(svg, delta) {
+  return svg.replace(/\bd="([^"]+)"/g, (_, d) => {
+    const updated = d.replace(/([ML])([0-9.]+) ([0-9.]+)/g, (__, cmd, x, y) => {
+      return `${cmd}${x} ${(parseFloat(y) + delta).toFixed(1)}`;
+    });
+    return `d="${updated}"`;
+  });
+}
+
+function compactProjectSvg(svg) {
+  let out = svg;
+  out = out.replace('width="412" height="232" viewBox="0 0 412 232"', 'width="412" height="194" viewBox="0 0 412 194"');
+  out = out.replace('<rect width="412" height="232"', '<rect width="412" height="194"');
+  const titleIdx = out.indexOf('<text x="24.0" y="116.0"');
+  if (titleIdx !== -1) {
+    let head = shiftPathY(out.slice(0, titleIdx), -8);
+    head = head.replace('translate(39.0 65.0)', 'translate(39.0 57.0)');
+    head = head.replace('translate(39.0 39.0)', 'translate(39.0 31.0)');
+    head = head.replace('cx="372" cy="40"', 'cx="372" cy="36"');
+    head = shiftTranslateY(head, "50.0", "46.0");
+    head = shiftTranslateY(head, "30.0", "26.0");
+    out = head + out.slice(titleIdx);
+  }
+  out = out.replace('y="116.0"', 'y="102.0"');
+  out = out.replace('y="98"', 'y="84"');
+  out = out.replace('y="113"', 'y="99"');
+  out = out.replace('y="142.0"', 'y="125.0"');
+  out = out.replace('y="163.0"', 'y="146.0"');
+  out = out.replace(/y="184"/g, 'y="146"');
+  out = out.replace(/y="202\.7"/g, 'y="164.7"');
+  out = shiftTranslateY(out, "207.0", "169.0");
+  out = out.replace('y="203.0"', 'y="165.0"');
+  return out;
+}
+
+function compactStatsSvg(svg) {
+  let out = svg;
+  const hMatch = out.match(/viewBox="0 0 840 (\d+)"/);
+  const oldH = hMatch ? parseInt(hMatch[1], 10) : 400;
+  const newH = oldH - 54;
+  out = out.replace(`width="840" height="${oldH}" viewBox="0 0 840 ${oldH}"`, `width="840" height="${newH}" viewBox="0 0 840 ${newH}"`);
+  out = out.replace(`<rect width="840" height="${oldH}"`, `<rect width="840" height="${newH}"`);
+
+  out = out.replace(/<rect x="(28|224)" y="86" width="184" height="96"/g, '<rect x="$1" y="84" width="184" height="80"');
+  out = out.replace(/translate\((52\.0|248\.0) 130\.0\)/g, 'translate($1 124.0)');
+  out = out.replace(/y="132\.0"/g, 'y="126.0"');
+  out = out.replace(/y="164\.0"( fill="[^"]+" text-anchor="start")/g, 'y="150.0"$1');
+
+  const tileRow2Start = out.indexOf('<rect x="28" y="192"');
+  const calStart = out.indexOf('x="432.0"');
+  if (tileRow2Start !== -1 && calStart !== -1) {
+    const before = out.slice(0, tileRow2Start);
+    let mid = out.slice(tileRow2Start, calStart);
+    const after = out.slice(calStart);
+    mid = shiftPathY(mid, -20);
+    mid = mid.replace(/y="192" width="184" height="96"/g, 'y="172" width="184" height="80"');
+    mid = shiftTranslateY(mid, "236.0", "212.0");
+    mid = mid.replace(/y="238\.0"/g, 'y="214.0"');
+    mid = mid.replace(/y="270\.0"/g, 'y="238.0"');
+    out = before + mid + after;
+  }
+
+  out = out.replace('y="100.0"', 'y="96.0"');
+  out = out.replace(/y="124\.0"/g, 'y="118.0"');
+  out = out.replace(/y="136" (width="49\.1" )height="46"/g, 'y="128" $1height="38"');
+  out = out.replace(/y="164\.0"( fill="[^"]+" text-anchor="middle")/g, 'y="152.0"$1');
+  out = out.replace(/y="188" (width="49\.1" )height="46"/g, 'y="172" $1height="38"');
+  out = out.replace(/y="216\.0"( fill="[^"]+" text-anchor="middle")/g, 'y="196.0"$1');
+  out = out.replace(/y="240" (width="49\.1" )height="46"/g, 'y="216" $1height="38"');
+  out = out.replace(/y="268\.0"( fill="[^"]+" text-anchor="middle")/g, 'y="240.0"$1');
+  out = out.replace(/y="133" (width="55\.1" )height="52"/g, 'y="125" $1height="44"');
+  out = out.replace(/y="185" (width="55\.1" )height="52"/g, 'y="169" $1height="44"');
+  out = out.replace(/y="237" (width="55\.1" )height="52"/g, 'y="213" $1height="44"');
+  out = out.replace(/y="136\.75" (width="47\.6" )height="44\.5"/g, 'y="128.75" $1height="36.5"');
+  out = out.replace(/y="188\.75" (width="47\.6" )height="44\.5"/g, 'y="172.75" $1height="36.5"');
+  out = out.replace(/y="240\.75" (width="47\.6" )height="44\.5"/g, 'y="216.75" $1height="36.5"');
+
+  out = out.replace('y="322.0"', 'y="274.0"');
+  out = out.replace(/y="334" (width="[0-9.]+" )height="14"/g, 'y="286" $1height="13"');
+  out = out.replace(/cy="367"/g, 'cy="318"');
+  out = out.replace(/y="372\.0"/g, 'y="323.0"');
+  out = out.replace(/cy="393"/g, 'cy="344"');
+  out = out.replace(/y="398\.0"/g, 'y="349.0"');
+  return out;
 }
 
 function buildMaksikSvg(p, style, avatarUri, motion) {
@@ -200,9 +293,28 @@ function buildMaksikSvg(p, style, avatarUri, motion) {
 async function runPost() {
   const profile = JSON.parse(readFileSync(PROFILE_PATH, "utf8"));
   const style = extractStyle();
+
+  const hidden = new Set(profile.hidden || []);
+  for (const name of readdirSync("assets")) {
+    if (
+      name === "credit-dark.svg" ||
+      name === "credit-light.svg" ||
+      (hidden.has("about") && name.startsWith("about-")) ||
+      (hidden.has("streak") && name.startsWith("streak-")) ||
+      (hidden.has("buttons") && name.startsWith("button-"))
+    ) {
+      unlinkSync(`assets/${name}`);
+    } else if (name.startsWith("project-") && name.endsWith(".svg")) {
+      const p = `assets/${name}`;
+      writeFileSync(p, compactProjectSvg(readFileSync(p, "utf8")));
+    } else if (name === "stats-dark.svg" || name === "stats-light.svg") {
+      const p = `assets/${name}`;
+      writeFileSync(p, compactStatsSvg(readFileSync(p, "utf8")));
+    }
+  }
+
   const maksikImg = await fetchImage("https://github.com/lostvalkrie.png?size=200");
   const avatarUri = maksikImg ? maksikImg.dataUri : null;
-
   const darkPalette = palette(profile.seed, profile.scheme, true);
   const lightPalette = palette(profile.seed, profile.scheme, false);
 
@@ -211,18 +323,13 @@ async function runPost() {
   writeFileSync("assets/maksik-light.svg", buildMaksikSvg(lightPalette, style, avatarUri, profile.motion !== false));
 
   let readme = readFileSync(README_PATH, "utf8");
-  const maksikTag = `<a href="https://github.com/lostvalkrie"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/maksik-dark.svg"><img src="assets/maksik-light.svg" width="100%" alt="Maksik.AI — Coding Bro"></picture></a>`;
-  readme = readme.replace(/\n*<a href="https:\/\/github\.com\/lostvalkrie"><picture>[\s\S]*?<\/picture><\/a>\n*/g, "\n\n");
+  const creditRe = /\n*<a href="https:\/\/metawka\.github\.io\/expressive-profile\/[^"]*"><picture>[\s\S]*?<\/picture><\/a>\n*/g;
+  readme = readme.replace(creditRe, "\n\n");
+  const maksikRe = /\n*<a href="https:\/\/github\.com\/lostvalkrie"><picture>[\s\S]*?<\/picture><\/a>\n*/g;
+  readme = readme.replace(maksikRe, "\n\n");
 
-  const buttonRowMarker = `<picture><source media="(prefers-color-scheme: dark)" srcset="assets/button-l-dark.svg">`;
-  const creditMarker = `<a href="https://metawka.github.io/expressive-profile/`;
-  if (readme.includes(buttonRowMarker)) {
-    readme = readme.replace(buttonRowMarker, `${maksikTag}\n\n${buttonRowMarker}`);
-  } else if (readme.includes(creditMarker)) {
-    readme = readme.replace(creditMarker, `${maksikTag}\n\n${creditMarker}`);
-  } else {
-    readme = readme.replace("</div>", `\n${maksikTag}\n\n</div>`);
-  }
+  const maksikTag = `<a href="https://github.com/lostvalkrie"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/maksik-dark.svg"><img src="assets/maksik-light.svg" width="100%" alt="Maksik.AI — Coding Bro"></picture></a>`;
+  readme = readme.replace(/\s*<\/div>\s*$/, `\n\n${maksikTag}\n\n</div>\n`);
   writeFileSync(README_PATH, readme);
 }
 

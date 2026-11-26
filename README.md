@@ -6,8 +6,6 @@
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/wave-dark.svg"><img src="assets/wave-light.svg" width="100%" alt=""></picture>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/about-dark.svg"><img src="assets/about-light.svg" width="100%" alt="About me"></picture>
-
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack-dark.svg"><img src="assets/stack-light.svg" width="100%" alt="Tech &amp; Tools"></picture>
 
 <a href="https://github.com/pzwt4cc/mithril-viewer"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/project-mithril-viewer-dark.svg"><img src="assets/project-mithril-viewer-light.svg" width="49%" alt="mithril-viewer"></picture></a>&nbsp;<a href="https://github.com/pzwt4cc/nulla"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/project-nulla-dark.svg"><img src="assets/project-nulla-light.svg" width="49%" alt="nulla"></picture></a>
@@ -16,12 +14,6 @@
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/stats-dark.svg"><img src="assets/stats-light.svg" width="100%" alt="GitHub activity"></picture>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/streak-dark.svg"><img src="assets/streak-light.svg" width="100%" alt="Streak"></picture>
-
 <a href="https://github.com/lostvalkrie"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/maksik-dark.svg"><img src="assets/maksik-light.svg" width="100%" alt="Maksik.AI — Coding Bro"></picture></a>
-
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/button-l-dark.svg"><img src="assets/button-l-light.svg" width="37.030%" alt=""></picture><a href="https://github.com/pzwt4cc?tab=repositories"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/button-1-dark.svg"><img src="assets/button-1-light.svg" width="25.939%" alt="All repositories"></picture></a><picture><source media="(prefers-color-scheme: dark)" srcset="assets/button-r-dark.svg"><img src="assets/button-r-light.svg" width="37.030%" alt=""></picture>
-
-<a href="https://metawka.github.io/expressive-profile/?from=pzwt4cc"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/credit-dark.svg"><img src="assets/credit-light.svg" width="auto" alt="Made with Expressive Profile"></picture></a>
 
 </div>

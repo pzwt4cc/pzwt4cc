@@ -10,14 +10,15 @@
     "hero",
     "socials",
     "wave",
-    "about",
     "stack",
     "projects",
-    "stats",
+    "stats"
+  ],
+  "hidden": [
+    "about",
     "streak",
     "buttons"
   ],
-  "hidden": [],
   "hero": {
     "greeting": "Hi there, I'm",
     "name": "pzwt4cc",
@@ -41,26 +42,13 @@
   },
   "about": {
     "title": "About me",
-    "items": [
-      {
-        "icon": "brand:archlinux",
-        "label": "Arch Linux (btw) + Hyprland — home base"
-      },
-      {
-        "icon": "brand:react",
-        "label": "Web & Linux tools — React, Node.js, Rust, QML"
-      },
-      {
-        "icon": "brand:anthropic",
-        "label": "AI tinkering, privacy tools, anime & good talks"
-      }
-    ]
+    "items": []
   },
   "stack": {
     "title": "Tech & Tools",
     "groups": [
       {
-        "title": "Systems & Native",
+        "title": "Systems & Environment",
         "items": [
           {
             "icon": "brand:rust",
@@ -71,12 +59,24 @@
             "label": "Qt / QML"
           },
           {
-            "icon": "brand:python",
-            "label": "Python"
-          },
-          {
             "icon": "brand:wayland",
             "label": "Wayland"
+          },
+          {
+            "icon": "brand:archlinux",
+            "label": "Arch Linux"
+          },
+          {
+            "icon": "brand:hyprland",
+            "label": "Hyprland"
+          },
+          {
+            "icon": "brand:zedindustries",
+            "label": "Zed"
+          },
+          {
+            "icon": "brand:git",
+            "label": "Git"
           }
         ]
       },
@@ -108,31 +108,6 @@
             "label": "Express.js"
           }
         ]
-      },
-      {
-        "title": "Environment & Workflow",
-        "items": [
-          {
-            "icon": "brand:archlinux",
-            "label": "Arch Linux"
-          },
-          {
-            "icon": "brand:hyprland",
-            "label": "Hyprland"
-          },
-          {
-            "icon": "brand:zedindustries",
-            "label": "Zed"
-          },
-          {
-            "icon": "brand:git",
-            "label": "Git"
-          },
-          {
-            "icon": "brand:github",
-            "label": "GitHub"
-          }
-        ]
       }
     ]
   },
@@ -151,17 +126,17 @@
         "shape": "cookie"
       },
       "nulla": {
-        "text": "Minimalist text & code editor with a Material 3 QML interface",
+        "text": "Minimalist code editor with a Material 3 QML UI",
         "icon": "edit_square",
         "shape": "clover"
       },
       "arabellity": {
-        "text": "Standalone Wayland terminal emulator in x86-64 NASM assembly",
+        "text": "Wayland terminal emulator in x86-64 NASM assembly",
         "icon": "terminal",
         "shape": "sunny"
       },
       "Lirel": {
-        "text": "Free local photo & video converter in Rust with Slint GUI",
+        "text": "Local photo & video converter in Rust with Slint GUI",
         "icon": "photo_camera",
         "shape": "clover"
       }
@@ -207,14 +182,7 @@
     "card": true
   },
   "buttons": {
-    "card": true,
-    "items": [
-      {
-        "icon": "book_2",
-        "label": "All repositories",
-        "url": "",
-        "style": "filled"
-      }
-    ]
+    "card": false,
+    "items": []
   }
 }
