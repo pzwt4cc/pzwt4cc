@@ -163,29 +163,46 @@ function shiftPathY(svg, delta) {
   });
 }
 
+function compactStackSvg(svg) {
+  let out = svg;
+  const hMatch = out.match(/viewBox="0 0 840 (\d+)"/);
+  const oldH = hMatch ? parseInt(hMatch[1], 10) : 208;
+  const newH = oldH - 28;
+  out = out.replace(`width="840" height="${oldH}" viewBox="0 0 840 ${oldH}"`, `width="840" height="${newH}" viewBox="0 0 840 ${newH}"`);
+  out = out.replace(`<rect width="840" height="${oldH}"`, `<rect width="840" height="${newH}"`);
+  out = out.replace(/y="86\.5"/g, 'y="78.5"');
+  out = shiftTranslateY(out, "95.0", "87.0");
+  out = out.replace(/y="109\.4"/g, 'y="101.4"');
+  out = out.replace(/y="144\.5"/g, 'y="122.5"');
+  out = shiftTranslateY(out, "153.0", "131.0");
+  out = out.replace(/y="167\.4"/g, 'y="145.4"');
+  return out;
+}
+
 function compactProjectSvg(svg) {
   let out = svg;
-  out = out.replace('width="412" height="232" viewBox="0 0 412 232"', 'width="412" height="194" viewBox="0 0 412 194"');
-  out = out.replace('<rect width="412" height="232"', '<rect width="412" height="194"');
-  const titleIdx = out.indexOf('<text x="24.0" y="116.0"');
-  if (titleIdx !== -1) {
-    let head = shiftPathY(out.slice(0, titleIdx), -8);
-    head = head.replace('translate(39.0 65.0)', 'translate(39.0 57.0)');
-    head = head.replace('translate(39.0 39.0)', 'translate(39.0 31.0)');
-    head = head.replace('cx="372" cy="40"', 'cx="372" cy="36"');
-    head = shiftTranslateY(head, "50.0", "46.0");
-    head = shiftTranslateY(head, "30.0", "26.0");
-    out = head + out.slice(titleIdx);
+  out = out.replace('width="412" height="232" viewBox="0 0 412 232"', 'width="412" height="148" viewBox="0 0 412 148"');
+  out = out.replace('<rect width="412" height="232"', '<rect width="412" height="148"');
+  const arrowIdx = out.indexOf('<circle cx="372" cy="40"');
+  const bgEnd = out.indexOf('<g class="pop"');
+  if (bgEnd !== -1 && arrowIdx !== -1) {
+    const pre = out.slice(0, bgEnd);
+    const badge = out.slice(bgEnd, arrowIdx);
+    const post = out.slice(arrowIdx);
+    out = pre + `<g transform="translate(46 40) scale(0.76) translate(-52 -52)">${badge}</g>` + post;
   }
-  out = out.replace('y="116.0"', 'y="102.0"');
-  out = out.replace('y="98"', 'y="84"');
-  out = out.replace('y="113"', 'y="99"');
-  out = out.replace('y="142.0"', 'y="125.0"');
-  out = out.replace('y="163.0"', 'y="146.0"');
-  out = out.replace(/y="184"/g, 'y="146"');
-  out = out.replace(/y="202\.7"/g, 'y="164.7"');
-  out = shiftTranslateY(out, "207.0", "169.0");
-  out = out.replace('y="203.0"', 'y="165.0"');
+  out = out.replace('cx="372" cy="40" r="18"', 'cx="374" cy="38" r="16"');
+  out = shiftTranslateY(out, "50.0", "48.0");
+  out = out.replace('translate(362.0 48.0)', 'translate(364.0 48.0)');
+  out = out.replace('x="24.0" y="116.0"', 'x="82.0" y="47.0"');
+  out = out.replace('font-size:23px;font-weight:650;', 'font-size:21px;font-weight:650;');
+  out = out.replace('y="142.0"', 'y="86.0"');
+  out = out.replace('font-size:15px;font-weight:400;', 'font-size:14.5px;font-weight:400;');
+  out = out.replace('y="163.0"', 'y="105.0"');
+  out = out.replace(/y="184" (width="[0-9.]+" )height="28"/g, 'y="104" $1height="26"');
+  out = out.replace(/y="202\.7"/g, 'y="121.5"');
+  out = shiftTranslateY(out, "207.0", "126.0");
+  out = out.replace('y="203.0"', 'y="122.0"');
   return out;
 }
 
@@ -304,6 +321,9 @@ async function runPost() {
       (hidden.has("buttons") && name.startsWith("button-"))
     ) {
       unlinkSync(`assets/${name}`);
+    } else if (name === "stack-dark.svg" || name === "stack-light.svg") {
+      const p = `assets/${name}`;
+      writeFileSync(p, compactStackSvg(readFileSync(p, "utf8")));
     } else if (name.startsWith("project-") && name.endsWith(".svg")) {
       const p = `assets/${name}`;
       writeFileSync(p, compactProjectSvg(readFileSync(p, "utf8")));

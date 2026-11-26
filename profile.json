@@ -48,7 +48,7 @@
     "title": "Tech & Tools",
     "groups": [
       {
-        "title": "Systems & Environment",
+        "title": "",
         "items": [
           {
             "icon": "brand:rust",
@@ -81,7 +81,7 @@
         ]
       },
       {
-        "title": "Web Stack",
+        "title": "",
         "items": [
           {
             "icon": "brand:html5",
