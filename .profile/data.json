@@ -1,7 +1,7 @@
 {
- "key": "d6d36383",
+ "key": "803d1bce",
  "stars": 3,
- "contributions": 636,
+ "contributions": 648,
  "repos": 54,
  "followers": 2,
  "languages": [
@@ -15,7 +15,7 @@
   ],
   [
    "JavaScript",
-   409970
+   580210
   ],
   [
    "Assembly",
@@ -23,15 +23,15 @@
   ],
   [
    "HTML",
-   178728
+   180237
+  ],
+  [
+   "CSS",
+   164835
   ],
   [
    "C++",
    116857
-  ],
-  [
-   "Python",
-   114882
   ]
  ],
  "days": [
@@ -62,12 +62,12 @@
     "today": false
    },
    {
-    "c": 19,
+    "c": 18,
     "day": 13,
     "today": false
    },
    {
-    "c": 11,
+    "c": 12,
     "day": 14,
     "today": false
    }
@@ -135,7 +135,11 @@
     "day": 26,
     "today": true
    },
-   null,
+   {
+    "c": 12,
+    "day": 27,
+    "today": false
+   },
    null
   ]
  ],
@@ -151,6 +155,15 @@
    "fork": false,
    "stars": 0,
    "language": "Rust",
+   "topics": []
+  },
+  {
+   "name": "nulla",
+   "url": "https://github.com/pzwt4cc/nulla",
+   "text": "",
+   "fork": false,
+   "stars": 1,
+   "language": "QML",
    "topics": []
   }
  ],
