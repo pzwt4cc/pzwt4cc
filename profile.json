@@ -146,14 +146,14 @@
   },
   "stats": {
     "title": "GitHub activity",
-    "stars": "Stars earned",
-    "contributions": "Contributions this year",
+    "stars": "Stars",
+    "contributions": "Contributions",
     "repos": "Public repos",
     "followers": "Followers",
     "calendar": "Last 21 days",
     "weekdays": "SMTWTFS",
     "languages": "Languages across repositories",
-    "showLanguages": true
+    "showLanguages": false
   },
   "streak": {
     "title": "Streak",

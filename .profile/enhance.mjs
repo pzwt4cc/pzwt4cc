@@ -19,6 +19,7 @@ import {
 
 const PROFILE_PATH = "profile.json";
 const STATE_PATH = ".profile/state.json";
+const DATA_PATH = ".profile/data.json";
 const README_PATH = "README.md";
 
 const SCHEMES = {
@@ -33,7 +34,8 @@ const ROLES = [
   "primary", "onPrimary", "primaryContainer", "onPrimaryContainer",
   "secondary", "onSecondary", "secondaryContainer", "onSecondaryContainer",
   "tertiary", "onTertiary", "tertiaryContainer", "onTertiaryContainer",
-  "surfaceContainer", "surfaceContainerLow", "onSurface", "onSurfaceVariant",
+  "surfaceContainer", "surfaceContainerLow", "surfaceContainerHigh",
+  "onSurface", "onSurfaceVariant",
 ];
 
 const SHAPE_PARAMS = {
@@ -48,6 +50,18 @@ const SHAPE_PARAMS = {
 };
 
 const AVATAR_SHAPES = ["cookie12", "cookie", "flower", "pill", "gem", "clover", "sunny"];
+
+const STAT_ICONS = {
+  monitoring: "M128.5-128.63Q120-137.25 120-150v-46q0-12.75 8.68-21.38 8.67-8.62 21.5-8.62 12.82 0 21.32 8.62 8.5 8.63 8.5 21.38v46q0 12.75-8.68 21.37-8.67 8.63-21.5 8.63-12.82 0-21.32-8.63Zm165 0Q285-137.25 285-150v-206q0-12.75 8.68-21.38 8.67-8.62 21.5-8.62 12.82 0 21.32 8.62 8.5 8.63 8.5 21.38v206q0 12.75-8.68 21.37-8.67 8.63-21.5 8.63-12.82 0-21.32-8.63Zm165 0Q450-137.25 450-150v-146q0-12.75 8.68-21.38 8.67-8.62 21.5-8.62 12.82 0 21.32 8.62 8.5 8.63 8.5 21.38v146q0 12.75-8.68 21.37-8.67 8.63-21.5 8.63-12.82 0-21.32-8.63Zm165 0Q615-137.25 615-150v-246q0-12.75 8.68-21.38 8.67-8.62 21.5-8.62 12.82 0 21.32 8.62 8.5 8.63 8.5 21.38v246q0 12.75-8.68 21.37-8.67 8.63-21.5 8.63-12.82 0-21.32-8.63Zm165 0Q780-137.25 780-150v-366q0-12.75 8.68-21.38 8.67-8.62 21.5-8.62 12.82 0 21.32 8.62 8.5 8.63 8.5 21.38v366q0 12.75-8.68 21.37-8.67 8.63-21.5 8.63-12.82 0-21.32-8.63ZM559.5-499q-11.5 0-22.46-4.7-10.97-4.69-20.04-13.3L400-634 172-407q-9.07 9-21.53 8.5-12.47-.5-21.34-9.5-8.13-9-8.63-21t8.5-21l229-227q9.07-8.87 20.04-12.93Q389-694 400-694t22.34 4.07Q433.68-685.87 442-677l118 118 229-229q9-9 21-9t20.87 9q8.13 9 8.63 21t-8.5 21L602-517q-8 9-19.5 13.5t-23 4.5Z",
+  star: "M480-269 294-157q-8 5-17 4.5t-16-5.5q-7-5-10.5-13t-1.5-18l49-212-164-143q-8-7-9.5-15.5t.5-16.5q2-8 9-13.5t17-6.5l217-19 84-200q4-9 12-13.5t16-4.5q8 0 16 4.5t12 13.5l84 200 217 19q10 1 17 6.5t9 13.5q2 8 .5 16.5T826-544L662-401l49 212q2 10-1.5 18T699-158q-7 5-16 5.5t-17-4.5L480-269Z",
+  commit: "M352.5-325.5Q298-371 284-440H120q-17 0-28.5-11.5T80-480q0-17 11.5-28.5T120-520h164q14-69 68.5-114.5T480-680q73 0 127.5 45.5T676-520h164q17 0 28.5 11.5T880-480q0 17-11.5 28.5T840-440H676q-14 69-68.5 114.5T480-280q-73 0-127.5-45.5ZM479.76-340Q538-340 579-380.76q41-40.77 41-99Q620-538 579.24-579q-40.77-41-99-41Q422-620 381-579.24q-41 40.77-41 99Q340-422 380.76-381q40.77 41 99 41Z",
+  book_2: "M290-80q-54 0-92-38t-38-92v-540q0-54 38-92t92-38h450q25 0 42.5 17.5T800-820v515q0 9-5 16.5T781-277q-19 8-30 26t-11 41q0 23 11 40.5t30 25.5q9 4 14 13t5 21q0 12-8.5 21T770-80H290Zm81.5-268.5Q380-357 380-370v-420q0-13-8.5-21.5T350-820q-13 0-21.5 8.5T320-790v420q0 13 8.5 21.5T350-340q13 0 21.5-8.5ZM290-140h409q-9-15-14-33t-5-37q0-20 5-37.5t15-32.5H290q-29 0-49.5 20.5T220-210q0 29 20.5 49.5T290-140Z",
+  group: "M38-254q0-35 18-63.5t50-42.5q73-32 131.5-46T358-420q62 0 120 14t131 46q32 14 50.5 42.5T678-254v34q0 25-17.5 42.5T618-160H98q-25 0-42.5-17.5T38-220v-34Zm686 94q5-15 9.5-29.5T738-220v-34q0-63-29-101.5T622-420q69 8 130 22t99 34q33 19 52 47t19 63v34q0 25-17.5 42.5T862-160H724ZM250-523q-42-42-42-108t42-108q42-42 108-42t108 42q42 42 42 108t-42 108q-42 42-108 42t-108-42Zm426 0q-42 42-108 42-11 0-24.5-1.5T519-488q24-25 36.5-61.5T568-631q0-45-12.5-79.5T519-774q11-3 24.5-5t24.5-2q66 0 108 42t42 108q0 66-42 108Z",
+};
+
+function esc(s) {
+  return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+}
 
 function shapePath(kind, cx, cy, r) {
   const [n, a, sharp] = SHAPE_PARAMS[kind] ?? SHAPE_PARAMS.cookie12;
@@ -154,15 +168,6 @@ function shiftTranslateY(svg, fromY, toY) {
   );
 }
 
-function shiftPathY(svg, delta) {
-  return svg.replace(/\bd="([^"]+)"/g, (_, d) => {
-    const updated = d.replace(/([ML])([0-9.]+) ([0-9.]+)/g, (__, cmd, x, y) => {
-      return `${cmd}${x} ${(parseFloat(y) + delta).toFixed(1)}`;
-    });
-    return `d="${updated}"`;
-  });
-}
-
 function compactStackSvg(svg) {
   let out = svg;
   const hMatch = out.match(/viewBox="0 0 840 (\d+)"/);
@@ -206,55 +211,37 @@ function compactProjectSvg(svg) {
   return out;
 }
 
-function compactStatsSvg(svg) {
-  let out = svg;
-  const hMatch = out.match(/viewBox="0 0 840 (\d+)"/);
-  const oldH = hMatch ? parseInt(hMatch[1], 10) : 400;
-  const newH = oldH - 54;
-  out = out.replace(`width="840" height="${oldH}" viewBox="0 0 840 ${oldH}"`, `width="840" height="${newH}" viewBox="0 0 840 ${newH}"`);
-  out = out.replace(`<rect width="840" height="${oldH}"`, `<rect width="840" height="${newH}"`);
+function buildCompactStatsSvg(p, style, data, profile, motion) {
+  const w = 840;
+  const h = 160;
+  const title = profile.stats?.title || "GitHub activity";
+  const b = [`<rect width="${w}" height="${h}" rx="32" fill="${p.surfaceContainerLow}"/>`];
 
-  out = out.replace(/<rect x="(28|224)" y="86" width="184" height="96"/g, '<rect x="$1" y="84" width="184" height="80"');
-  out = out.replace(/translate\((52\.0|248\.0) 130\.0\)/g, 'translate($1 124.0)');
-  out = out.replace(/y="132\.0"/g, 'y="126.0"');
-  out = out.replace(/y="164\.0"( fill="[^"]+" text-anchor="start")/g, 'y="150.0"$1');
+  b.push(`<path class="pop" style="animation-delay:0.00s" d="${shapePath("cookie", 46, 42, 18)}" fill="${p.primaryContainer}"/>`);
+  b.push(`<g class="pop" style="animation-delay:0.05s"><path d="${STAT_ICONS.monitoring}" fill="${p.onPrimaryContainer}" transform="translate(36.0 52.0) scale(0.0208)"/></g>`);
+  b.push(`<text x="76.0" y="49.0" fill="${p.onSurface}" text-anchor="start" style="font-size:22px;font-weight:600;animation-delay:0.00s;" class="up">${esc(title)}</text>`);
 
-  const tileRow2Start = out.indexOf('<rect x="28" y="192"');
-  const calStart = out.indexOf('x="432.0"');
-  if (tileRow2Start !== -1 && calStart !== -1) {
-    const before = out.slice(0, tileRow2Start);
-    let mid = out.slice(tileRow2Start, calStart);
-    const after = out.slice(calStart);
-    mid = shiftPathY(mid, -20);
-    mid = mid.replace(/y="192" width="184" height="96"/g, 'y="172" width="184" height="80"');
-    mid = shiftTranslateY(mid, "236.0", "212.0");
-    mid = mid.replace(/y="238\.0"/g, 'y="214.0"');
-    mid = mid.replace(/y="270\.0"/g, 'y="238.0"');
-    out = before + mid + after;
-  }
+  const tiles = [
+    ["star", data.stars, profile.stats?.stars || "Stars", "cookie"],
+    ["commit", data.contributions, profile.stats?.contributions || "Contributions", "clover"],
+    ["book_2", data.repos, profile.stats?.repos || "Public repos", "sunny"],
+    ["group", data.followers, profile.stats?.followers || "Followers", "flower"],
+  ];
 
-  out = out.replace('y="100.0"', 'y="96.0"');
-  out = out.replace(/y="124\.0"/g, 'y="118.0"');
-  out = out.replace(/y="136" (width="49\.1" )height="46"/g, 'y="128" $1height="38"');
-  out = out.replace(/y="164\.0"( fill="[^"]+" text-anchor="middle")/g, 'y="152.0"$1');
-  out = out.replace(/y="188" (width="49\.1" )height="46"/g, 'y="172" $1height="38"');
-  out = out.replace(/y="216\.0"( fill="[^"]+" text-anchor="middle")/g, 'y="196.0"$1');
-  out = out.replace(/y="240" (width="49\.1" )height="46"/g, 'y="216" $1height="38"');
-  out = out.replace(/y="268\.0"( fill="[^"]+" text-anchor="middle")/g, 'y="240.0"$1');
-  out = out.replace(/y="133" (width="55\.1" )height="52"/g, 'y="125" $1height="44"');
-  out = out.replace(/y="185" (width="55\.1" )height="52"/g, 'y="169" $1height="44"');
-  out = out.replace(/y="237" (width="55\.1" )height="52"/g, 'y="213" $1height="44"');
-  out = out.replace(/y="136\.75" (width="47\.6" )height="44\.5"/g, 'y="128.75" $1height="36.5"');
-  out = out.replace(/y="188\.75" (width="47\.6" )height="44\.5"/g, 'y="172.75" $1height="36.5"');
-  out = out.replace(/y="240\.75" (width="47\.6" )height="44\.5"/g, 'y="216.75" $1height="36.5"');
+  tiles.forEach(([ic, value, label, sh], n) => {
+    const tx = 28 + n * 199;
+    const ty = 74;
+    b.push(`<g class="up" style="animation-delay:${(0.08 + n * 0.06).toFixed(2)}s">`);
+    b.push(`<rect x="${tx}" y="${ty}" width="187" height="64" rx="20" fill="${p.surfaceContainerHigh}"/>`);
+    b.push(`<path d="${shapePath(sh, tx + 32, ty + 32, 17)}" fill="${p.primaryContainer}"/>`);
+    b.push(`<path d="${STAT_ICONS[ic]}" fill="${p.onPrimaryContainer}" transform="translate(${(tx + 22).toFixed(1)} ${(ty + 42).toFixed(1)}) scale(0.0208)"/>`);
+    b.push(`<text x="${tx + 58}" y="${ty + 33}" fill="${p.onSurface}" text-anchor="start" style="font-size:23px;font-weight:700;">${esc(value)}</text>`);
+    b.push(`<text x="${tx + 58}" y="${ty + 50}" fill="${p.onSurfaceVariant}" text-anchor="start" style="font-size:13px;font-weight:500;">${esc(label)}</text>`);
+    b.push(`</g>`);
+  });
 
-  out = out.replace('y="322.0"', 'y="274.0"');
-  out = out.replace(/y="334" (width="[0-9.]+" )height="14"/g, 'y="286" $1height="13"');
-  out = out.replace(/cy="367"/g, 'cy="318"');
-  out = out.replace(/y="372\.0"/g, 'y="323.0"');
-  out = out.replace(/cy="393"/g, 'cy="344"');
-  out = out.replace(/y="398\.0"/g, 'y="349.0"');
-  return out;
+  const animOff = motion ? "" : "<style>*{animation:none!important}</style>";
+  return `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img" aria-label="${esc(title)}"><title>${esc(title)}</title><style>${style}</style>${animOff}${b.join("")}</svg>`;
 }
 
 function buildMaksikSvg(p, style, avatarUri, motion) {
@@ -309,6 +296,7 @@ function buildMaksikSvg(p, style, avatarUri, motion) {
 
 async function runPost() {
   const profile = JSON.parse(readFileSync(PROFILE_PATH, "utf8"));
+  const data = JSON.parse(readFileSync(DATA_PATH, "utf8"));
   const style = extractStyle();
 
   const hidden = new Set(profile.hidden || []);
@@ -327,9 +315,6 @@ async function runPost() {
     } else if (name.startsWith("project-") && name.endsWith(".svg")) {
       const p = `assets/${name}`;
       writeFileSync(p, compactProjectSvg(readFileSync(p, "utf8")));
-    } else if (name === "stats-dark.svg" || name === "stats-light.svg") {
-      const p = `assets/${name}`;
-      writeFileSync(p, compactStatsSvg(readFileSync(p, "utf8")));
     }
   }
 
@@ -337,10 +322,13 @@ async function runPost() {
   const avatarUri = maksikImg ? maksikImg.dataUri : null;
   const darkPalette = palette(profile.seed, profile.scheme, true);
   const lightPalette = palette(profile.seed, profile.scheme, false);
+  const motion = profile.motion !== false;
 
   mkdirSync("assets", { recursive: true });
-  writeFileSync("assets/maksik-dark.svg", buildMaksikSvg(darkPalette, style, avatarUri, profile.motion !== false));
-  writeFileSync("assets/maksik-light.svg", buildMaksikSvg(lightPalette, style, avatarUri, profile.motion !== false));
+  writeFileSync("assets/stats-dark.svg", buildCompactStatsSvg(darkPalette, style, data, profile, motion));
+  writeFileSync("assets/stats-light.svg", buildCompactStatsSvg(lightPalette, style, data, profile, motion));
+  writeFileSync("assets/maksik-dark.svg", buildMaksikSvg(darkPalette, style, avatarUri, motion));
+  writeFileSync("assets/maksik-light.svg", buildMaksikSvg(lightPalette, style, avatarUri, motion));
 
   let readme = readFileSync(README_PATH, "utf8");
   const creditRe = /\n*<a href="https:\/\/metawka\.github\.io\/expressive-profile\/[^"]*"><picture>[\s\S]*?<\/picture><\/a>\n*/g;
