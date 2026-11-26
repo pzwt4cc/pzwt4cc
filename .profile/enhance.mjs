@@ -169,6 +169,7 @@ function shiftTranslateY(svg, fromY, toY) {
 }
 
 function compactStackSvg(svg) {
+  if (!svg.includes('y="86.5"')) return svg;
   let out = svg;
   const hMatch = out.match(/viewBox="0 0 840 (\d+)"/);
   const oldH = hMatch ? parseInt(hMatch[1], 10) : 208;
@@ -185,6 +186,7 @@ function compactStackSvg(svg) {
 }
 
 function compactProjectSvg(svg) {
+  if (!svg.includes('height="232"')) return svg;
   let out = svg;
   out = out.replace('width="412" height="232" viewBox="0 0 412 232"', 'width="412" height="148" viewBox="0 0 412 148"');
   out = out.replace('<rect width="412" height="232"', '<rect width="412" height="148"');
