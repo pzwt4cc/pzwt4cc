@@ -1,7 +1,7 @@
 {
- "key": "da0b4134",
+ "key": "d6d36383",
  "stars": 3,
- "contributions": 647,
+ "contributions": 636,
  "repos": 54,
  "followers": 2,
  "languages": [
@@ -15,7 +15,7 @@
   ],
   [
    "JavaScript",
-   580210
+   409970
   ],
   [
    "Assembly",
@@ -23,15 +23,15 @@
   ],
   [
    "HTML",
-   180237
-  ],
-  [
-   "CSS",
-   164835
+   178728
   ],
   [
    "C++",
    116857
+  ],
+  [
+   "Python",
+   114882
   ]
  ],
  "days": [
@@ -62,12 +62,12 @@
     "today": false
    },
    {
-    "c": 18,
+    "c": 19,
     "day": 13,
     "today": false
    },
    {
-    "c": 12,
+    "c": 11,
     "day": 14,
     "today": false
    }
@@ -135,11 +135,7 @@
     "day": 26,
     "today": true
    },
-   {
-    "c": 11,
-    "day": 27,
-    "today": false
-   },
+   null,
    null
   ]
  ],
