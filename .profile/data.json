@@ -1,17 +1,17 @@
 {
- "key": "e5d59e1",
+ "key": "7be1d5d5",
  "stars": 3,
- "contributions": 690,
+ "contributions": 713,
  "repos": 54,
  "followers": 2,
  "languages": [
   [
    "Rust",
-   772445
+   953794
   ],
   [
    "QML",
-   747202
+   852051
   ],
   [
    "JavaScript",
@@ -22,12 +22,12 @@
    240009
   ],
   [
-   "HTML",
-   178728
+   "C++",
+   187193
   ],
   [
-   "C++",
-   116857
+   "HTML",
+   178728
   ],
   [
    "Python",
@@ -136,15 +136,19 @@
     "today": false
    },
    {
-    "c": 54,
+    "c": 68,
     "day": 27,
-    "today": true
+    "today": false
    },
-   null
+   {
+    "c": 9,
+    "day": 28,
+    "today": true
+   }
   ]
  ],
  "streak": {
-  "current": 2,
+  "current": 3,
   "longest": 14
  },
  "pins": [
